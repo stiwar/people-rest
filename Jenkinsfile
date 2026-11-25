@@ -8,5 +8,10 @@ pipeline {
             branch: 'feature/jenkinsfile'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'mvn clean package'
+      }
+    }
   }
 }
